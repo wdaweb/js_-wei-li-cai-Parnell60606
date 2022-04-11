@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 製作隨機數字 function，提供最小整數和最大整數，回傳一個區間內的隨機整數
+        const rand = (min, max) => {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        // 快樂威力彩
+        // let aArea = [a, b, c, d, e, f]
+        // let a = Math.ceil(Math.random() * 38)
+        // let b = Math.ceil(Math.random() * 38)
+        // let c = Math.ceil(Math.random() * 38)
+        // let d = Math.ceil(Math.random() * 38)
+        // let e = Math.ceil(Math.random() * 38)
+        // let f = Math.ceil(Math.random() * 38)
+
+
+        // document.write(`A區${aArea} <br>`)
+        // document.write(`B區${Math.ceil(Math.random() * 8)}`)
+
+        const aArea = []
+        while (aArea.length < 6) {
+            let num = rand(1, 100)
+            if (!aArea.includes(num))
+                aArea.push(num)
+        }
+
+
+        document.write(`A區${aArea} <br>`)
+        document.write(`B區${Math.ceil(Math.random() * 8)}`)
+
+    </script>
+</body>
+
+</html>
